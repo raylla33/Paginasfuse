@@ -1,0 +1,92 @@
+@import "src/@fuse/scss/fuse";
+
+toolbar {
+    position: relative;
+    display: flex;
+    flex: 0 0 auto;
+    z-index: 4;
+
+    &.below {
+        z-index: 2;
+    }
+
+    .mat-toolbar {
+        position: relative;
+        background: inherit !important;
+        color: inherit !important;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        .logo-icon {
+            width: 38px;
+        }
+    }
+
+    .user-button,
+    fuse-search-bar,
+    .language-button,
+    .chat-panel-toggle-button,
+    .quick-panel-toggle-button {
+        min-width: 64px;
+        height: 64px;
+
+        @include media-breakpoint('xs') {
+            height: 56px;
+        }
+    }
+
+    .navbar-toggle-button {
+        min-width: 56px;
+        height: 56px;
+        color: aliceblue;
+    }
+
+    .toolbar-separator {
+        height: 64px;
+        width: 1px;
+
+        @include media-breakpoint('xs') {
+            height: 56px;
+        }
+    }
+}
+table {
+    width: 100%;
+  }
+
+  .img-circle{
+    width: 45px;
+    border-radius: 130px;
+    height: 45px; 
+    margin-right: 10px;
+  } 
+  .d-flex{
+
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  .form{
+    margin-right:8px ;
+    padding: 4px;
+    width: 230px;
+    color: #d8dbe2 !important
+  }
+  .w-custom{
+    width: 427px;
+    margin-left: 8px;
+    margin-top: 4px;
+  }
+.bg-header{
+    background-color: #e0e0df !important
+}
+.conteiner-form{
+    padding: 0 4px;
+    background: white;
+}
+.color-button{
+    background-color: #2196f3 !important
+}
