@@ -202,13 +202,18 @@ table {
   
   /* Modal Content */
   .modal-content {
-    background-color: #dfecf7;
+    background-color: #fefefe;
     margin: auto;
-    padding: 20px 20px 20px;
+    padding:  20px 20px 20px;
     border: 1px solid #888;
     width: 30%;
     border-radius: 15px;
-  }
+    background-color: aliceblue;
+    font-family: 'Muli';
+    color: #5c616f;
+
+}
+  
   
   /* The Close Button */
   .close {
@@ -230,10 +235,6 @@ table {
     border: 2px solid #416eb9;
     transition: border .2s;;
   }
-  .header-modal{
-    margin-right: 18px;
-    color: #5c616f;
-    font-family: 'Muli';
-    font-size: 20px;
-    padding: 10px;
-  }
+.titulo{
+    font-size: 15px;
+}

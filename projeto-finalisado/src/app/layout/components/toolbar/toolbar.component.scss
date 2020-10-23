@@ -1,0 +1,239 @@
+@import "src/@fuse/scss/fuse";
+
+toolbar {
+    position: relative;
+    display: flex;
+    flex: 0 0 auto;
+    z-index: 4;
+
+    &.below {
+        z-index: 2;
+    }
+
+    .mat-toolbar {
+        position: relative;
+        background: inherit !important;
+        color: inherit !important;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        .logo-icon {
+            width: 38px;
+        }
+    }
+
+    .user-button,
+    fuse-search-bar,
+    .language-button,
+    .chat-panel-toggle-button,
+    .quick-panel-toggle-button {
+        min-width: 64px;
+        height: 64px;
+
+        @include media-breakpoint('xs') {
+            height: 56px;
+        }
+    }
+
+    .navbar-toggle-button {
+        min-width: 56px;
+        height: 56px;
+        color: aliceblue;
+    }
+
+    .toolbar-separator {
+        height: 64px;
+        width: 1px;
+
+        @include media-breakpoint('xs') {
+            height: 56px;
+        }
+    }
+}
+table {
+    width: 100%;
+  }
+
+  .img-circle{
+    width: 45px;
+    border-radius: 130px;
+    height: 45px; 
+    margin-right: 10px;
+  } 
+  .d-flex{
+
+    display: flex;
+    align-items: center;
+    margin: 10px 8px;
+
+  }
+  .form{
+    margin-right:8px ;
+    padding: 4px;
+    width: 230px;
+    color: #d8dbe2 !important
+  }
+  .w-custom{
+    width: 427px;
+    margin-left: 8px;
+    margin-top: 4px;
+  }
+.bg-header{
+    background-color: #e0e0df !important
+}
+.conteiner-form{
+    padding: 0 4px;
+    background: white;
+    display: flex;
+    margin-top: 25px;
+    border-radius: 11px;
+}
+.color-button{
+    background-color: #2196f3 !important;
+    
+}
+.border{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+.margin-form{
+    margin: 20px 2px;
+}
+.largura{
+    width: 100%;
+
+}
+.largura2{
+    width: 600px;
+}
+.button-flex{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-left:3px;
+
+}
+.img-circle-tamanho{
+    height: 35px;
+    width: 35px;
+}
+.border-button{
+    border-radius: 86px;
+    height: 24px;
+    width: 80px;
+    background-color: #1e751e;
+    border: yellowgreen;
+    font-size: large;
+    font-size: 13px;
+    color: aliceblue;
+}
+
+
+
+.mat-cell{
+    font-size:small;
+    font-family:revert ;
+    font-weight: bold;
+}
+.mat-header-cell{
+    font-weight: bold; 
+}
+.mat-paginator-container{
+    max-width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 8px;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+    font-family: 'Muli';
+    font-size: larger;
+    margin-top: 50px;
+}
+.border-button2{
+    border-radius: 86px;
+    height: 24px;
+    width: 170px;
+    background-color: #2196f3;
+    border:blue;
+    font-size: large;
+    font-size: 13px;
+    color: aliceblue;
+
+}
+.border-button3{
+    border-radius: 86px;
+    height: 24px;
+    width: 80px;
+    background-color: #242954;
+    border:blue;
+    font-size: large;
+    font-size: 13px;
+    color: aliceblue;
+}
+.ex-button{
+    border-radius: 86px;
+    height: 24px;
+    width: 96px;
+    background-color: red;
+    border:red;
+    font-size: large;
+    font-size: 13px;
+    color: aliceblue;
+}
+
+.modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #dfecf7;
+    margin: auto;
+    padding: 20px 20px 20px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 15px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    margin-bottom: 20px;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .custom-input:focus{
+    border: 2px solid #416eb9;
+    transition: border .2s;;
+  }
+  .header-modal{
+    margin-right: 18px;
+    color: #5c616f;
+    font-family: 'Muli';
+    font-size: 20px;
+    padding: 10px;
+  }

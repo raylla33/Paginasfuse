@@ -54,12 +54,9 @@ let ELEMENT_DATA_EX: PeriodicElement[] = [
 })
 
 export class ToolbarComponent implements OnInit, OnDestroy {
-    searchMember: string;
-    searchTelefone: string;
-    searchStatus: string;
-    pesquisarName: string;
-    pesquisarTelefone: string;
-    pesquisaStatus: string;
+    searchMember: string = '';
+    searchTelefone: string = '';
+    searchStatus: String = '';
     displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'status'];
     //   dataSource = ELEMENT_DATA;
     
@@ -160,53 +157,35 @@ export class ToolbarComponent implements OnInit, OnDestroy {
         ];
 
         this.navigation = navigation;
-
-        // Set the private defaults
         this._unsubscribeAll = new Subject();
     }
 
     pesquisar(){
-       
-        const val = this.searchMember?.toUpperCase();
-        const tel = this.searchTelefone?.toString();
-        const stat = this.searchStatus?.toUpperCase();
-        this.tempDataSource = [...ELEMENT_DATA].filter(function (d) {
-            return ((d.name.toUpperCase().indexOf(val) !== -1) ||
-                d.telefone.toString().indexOf(tel) !== -1 ||
-                d.status.toUpperCase().indexOf(stat) !== -1)
+        const name = this.searchMember?.toUpperCase();
+        const telefone = this.searchTelefone?.toUpperCase();
+        const status = this.searchStatus?.toUpperCase();
+        this.tempDataSource =  [...ELEMENT_DATA].filter(function (d){
+            return (d.name.toUpperCase().indexOf(name) !== -1 &&
+                    d.telefone.toUpperCase().indexOf(telefone) !== -1 &&
+                    d.status.toUpperCase().indexOf(status) !== -1)
         });
 
         this.dataSource = this.tempDataSource;
-        if (this.searchMember == null || this.searchMember == '')
-        if (this.searchTelefone == null || this.searchMember == '')
-        if (this.searchStatus == null || this.searchMember == '') {
-            this.tempDataSource = [...ELEMENT_DATA].filter(x => x.name);
-            this.tempDataSource = [...ELEMENT_DATA].filter(x => x.telefone);
-            this.tempDataSource = [...ELEMENT_DATA].filter(x => x.status)
-        }
     }
 
-    expesquisar(){
-
-        const val = this.searchMember?.toUpperCase();
-        const tel = this.searchTelefone?.toString();
-        const stat = this.searchStatus?.toUpperCase();
-        this.tempDataSource = [...ELEMENT_DATA_EX].filter(function (d) {
-            return ((d.name.toUpperCase().indexOf(val) !== -1) ||
-                d.telefone.toString().indexOf(tel) !== -1 ||
-                d.status.toUpperCase().indexOf(stat) !== -1)
+    pesquisarEx(){
+        const name = this.searchMember?.toUpperCase();
+        const telefone = this.searchTelefone?.toUpperCase();
+        const status = this.searchStatus?.toUpperCase();
+        this.tempDataSourceEx =  [...ELEMENT_DATA_EX].filter(function (d){
+            return (d.name.toUpperCase().indexOf(name) !== -1 &&
+                    d.telefone.toUpperCase().indexOf(telefone) !== -1 &&
+                    d.status.toUpperCase().indexOf(status) !== -1)
         });
 
-        this.dataSourceEx = this.tempDataSource;
-        if (this.searchMember == null || this.searchMember == '')
-        if (this.searchTelefone == null || this.searchMember == '')
-        if (this.searchStatus == null || this.searchMember == ''){
-            this.tempDataSourceEx = [...ELEMENT_DATA_EX].filter(x => x.name);
-            this.tempDataSourceEx = [...ELEMENT_DATA_EX].filter(x => x.telefone);
-            this.tempDataSourceEx = [...ELEMENT_DATA_EX].filter(x => x.status)
-        }
+        this.dataSourceEx = this.tempDataSourceEx;
     }
-
+ 
     openModal(){
         this.modalOpen = true;
         this.tempTitle = this.title;
